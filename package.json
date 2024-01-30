@@ -7,10 +7,12 @@
     "name": "Will Kerry",
     "email": "npm@willkerry.com"
   },
+  "packageManager": "bun@1.0.25",
   "description": "Generates valid NHS numbers",
   "version": "0.0.1",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --minify"
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify",
+    "test": "bun test"
   },
   "devDependencies": {
     "@types/bun": "latest",
