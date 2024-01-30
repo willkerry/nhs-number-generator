@@ -23,7 +23,14 @@ function calculateCheckDigit(nhsNumber: string): number {
   return elevenMinusRemainder === 11 ? 0 : elevenMinusRemainder;
 }
 
+/**
+ * Generates NHS numbers. When called multiple times with the same parameters,
+ * it will always generate the same numbers in the same order.
+ */
 export function* deterministicNhsNumberGenerator(
+  /**
+   * The ranges of NHS numbers to generate. Defaults to the 'valid' NHS number ranges.
+   */
   ranges: Range[] = [
     [400000000, 499999999],
     [600000000, 708800001],
@@ -56,7 +63,14 @@ export function* deterministicNhsNumberGenerator(
   }
 }
 
+/**
+ * Generates NHS numbers. When called multiple times with the same parameters,
+ * it will generate different numbers in a random order.
+ */
 export function* randomNhsNumberGenerator(
+  /**
+   * The ranges of NHS numbers to generate. Defaults to the 'valid' NHS number ranges.
+   */
   ranges: Range[] = [
     [400000000, 499999999],
     [600000000, 708800001],
@@ -73,20 +87,4 @@ export function* randomNhsNumberGenerator(
       yield candidateNumber + checkDigit;
     }
   }
-}
-
-function addSeparators(nhsNumber: string, separator: string = " "): string {
-  return `${nhsNumber.slice(0, 3)}${separator}${nhsNumber.slice(
-    3,
-    6
-  )}${separator}${nhsNumber.slice(6)}`;
-}
-
-function removeSeparators(nhsNumber: string): string {
-  if (!nhsNumber[3].match(/\d/) && !nhsNumber[7].match(/\d/)) {
-    return `${nhsNumber.slice(0, 3)}${nhsNumber.slice(4, 7)}${nhsNumber.slice(
-      8
-    )}`;
-  }
-  return nhsNumber;
 }
