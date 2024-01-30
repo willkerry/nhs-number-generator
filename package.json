@@ -1,0 +1,26 @@
+{
+  "name": "nhs-number-generator",
+  "module": "src/index.ts",
+  "type": "module",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Will Kerry",
+    "email": "npm@willkerry.com"
+  },
+  "description": "Generates valid NHS numbers",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/nhs-number-validator": "^1.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "nhs-number-validator": "^1.1.1"
+  }
+}
