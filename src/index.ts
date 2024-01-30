@@ -23,18 +23,8 @@ function calculateCheckDigit(nhsNumber: string): number {
   return elevenMinusRemainder === 11 ? 0 : elevenMinusRemainder;
 }
 
-/**
- * Generates NHS numbers. When called multiple times with the same parameters,
- * it will always generate the same numbers in the same order.
- */
 export function* deterministicNhsNumberGenerator(
-  /**
-   * The ranges of NHS numbers to generate. Defaults to the 'valid' NHS number ranges.
-   */
-  ranges: Range[] = [
-    [400000000, 499999999],
-    [600000000, 708800001],
-  ]
+  ranges: Range[] = [[900000000, 999999999]]
 ): Generator<string> {
   for (const [low, high] of ranges) {
     if (high < low) {
@@ -63,18 +53,8 @@ export function* deterministicNhsNumberGenerator(
   }
 }
 
-/**
- * Generates NHS numbers. When called multiple times with the same parameters,
- * it will generate different numbers in a random order.
- */
 export function* randomNhsNumberGenerator(
-  /**
-   * The ranges of NHS numbers to generate. Defaults to the 'valid' NHS number ranges.
-   */
-  ranges: Range[] = [
-    [400000000, 499999999],
-    [600000000, 708800001],
-  ]
+  ranges: Range[] = [[900000000, 999999999]]
 ): Generator<string> {
   while (true) {
     const [low, high] = ranges[Math.floor(Math.random() * ranges.length)];

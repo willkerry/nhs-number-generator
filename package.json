@@ -11,9 +11,10 @@
   },
   "packageManager": "bun@1.0.25",
   "description": "Generates valid NHS numbers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --minify",
+    "changeset": "changeset",
     "release": "pnpm run build && changeset version && changeset publish",
     "test": "bun test"
   },
