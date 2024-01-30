@@ -1,8 +1,10 @@
 {
   "name": "nhs-number-generator",
-  "module": "src/index.ts",
   "type": "module",
   "license": "GPL-3.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "author": {
     "name": "Will Kerry",
     "email": "npm@willkerry.com"
