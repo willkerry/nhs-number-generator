@@ -17,14 +17,13 @@
     "test": "bun test"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/bun": "latest",
-    "@types/nhs-number-validator": "^1.1.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0",
+    "@types/nhs-number-validator": "^1.1.2",
+    "nhs-number-validator": "^1.1.1",
     "tsup": "^8.0.1"
   },
-  "dependencies": {
-    "nhs-number-validator": "^1.1.1"
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
