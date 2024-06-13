@@ -26,5 +26,8 @@
     "nhs-number-validator": "^1.1.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
