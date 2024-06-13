@@ -1,5 +1,12 @@
 # nhs-number-generator
 
+## 0.2.1
+
+### Patch Changes
+
+- e7a79b0: Update built tool versions
+- a759d6f: Add a proper README
+
 ## 0.2.0
 
 ### Minor Changes

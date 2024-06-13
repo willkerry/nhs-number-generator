@@ -1,6 +1,7 @@
 {
   "name": "nhs-number-generator",
   "type": "module",
+  "private": false,
   "license": "GPL-3.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -11,7 +12,7 @@
   },
   "packageManager": "bun@1.0.25",
   "description": "Generates valid NHS numbers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --minify",
     "changeset": "changeset",
