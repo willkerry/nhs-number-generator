@@ -14,10 +14,12 @@ bun i nhs-number-generator
 
 ## Usage
 
+This package exposes two [generator functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*): one for random generation and one for deterministic generation of NHS numbers.
+
 ### Random generation
 
 ```typescript
-import { generateNhsNumber } from 'nhs-number-generator';
+import { randomNhsNumberGenerator } from 'nhs-number-generator';
 
 const generator = randomNhsNumberGenerator();
 
@@ -28,7 +30,7 @@ console.log(generator.next().value); // "9689628313"
 
 ### Deterministic generation
 
-If you want to generate the same sequence of numbers every time, you can use the `deterministicNhsNumberGenerator` function.
+To generate the same sequence of numbers repeatedly, use the `deterministicNhsNumberGenerator` function with the same seed value.
 
 ```typescript
 import { deterministicNhsNumberGenerator } from 'nhs-number-generator';
